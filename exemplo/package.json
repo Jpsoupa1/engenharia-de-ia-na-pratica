@@ -1,0 +1,21 @@
+{
+  "name": "exemplo-tarefas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Projeto pequeno para praticar a esteira: lista de tarefas em memória.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "lint": "biome check src test",
+    "typecheck": "tsc --noEmit",
+    "verificar": "npm run lint && npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.8",
+    "typescript": "7.0.2",
+    "vitest": "5.1.0"
+  }
+}
