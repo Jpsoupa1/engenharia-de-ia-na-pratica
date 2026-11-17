@@ -1,0 +1,44 @@
+# Conceito: passo 8 da esteira padrão. A última verificação é de máquina, igual para todo mundo.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: exemplo/package-lock.json
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Exemplo (lint, tipos e testes)
+        working-directory: exemplo
+        run: |
+          npm ci
+          npm run verificar
+
+      - name: Hooks com entradas simuladas
+        run: python3 .claude/hooks/test_hooks.py -v
+
+      - name: Relatório de telemetria com o JSONL de exemplo
+        run: python3 observabilidade/relatorio.py observabilidade/exemplo.jsonl
+
+      - name: Varredura de segredos
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
