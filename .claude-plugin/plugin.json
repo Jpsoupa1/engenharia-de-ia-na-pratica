@@ -1,0 +1,12 @@
+{
+  "name": "ia-na-pratica",
+  "displayName": "Engenharia de IA na prática",
+  "version": "1.0.0",
+  "description": "Skills de esteira (triagem, planejar, revisar, registrar-licao, handoff), subagentes com menor privilégio e hooks de guardrail e telemetria.",
+  "author": { "name": "João Pedro" },
+  "license": "MIT",
+  "keywords": ["claude-code", "esteira", "skills", "subagentes", "hooks", "observabilidade"],
+  "skills": ["./.claude/skills/"],
+  "agents": ["./.claude/agents/explorador.md", "./.claude/agents/revisor.md", "./.claude/agents/seguranca.md"],
+  "hooks": "./plugin/hooks.json"
+}

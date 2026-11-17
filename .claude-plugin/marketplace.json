@@ -1,0 +1,12 @@
+{
+  "name": "engenharia-de-ia-na-pratica",
+  "description": "Marketplace da aula Engenharia de IA na prática.",
+  "owner": { "name": "João Pedro" },
+  "plugins": [
+    {
+      "name": "ia-na-pratica",
+      "source": "./",
+      "description": "Skills de esteira, subagentes com menor privilégio e hooks de guardrail e telemetria."
+    }
+  ]
+}
