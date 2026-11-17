@@ -1,0 +1,28 @@
+# Conceito: segredos fora do repositório e telemetria fora do histórico.
+
+# Segredos e configuração local
+.env
+.env.*
+!.env.exemplo
+.mcp.json
+.claude/settings.local.json
+CLAUDE.local.md
+*.pem
+*.key
+
+# Dependências e build
+node_modules/
+dist/
+coverage/
+
+# Telemetria (observabilidade/relatorio.py lê daqui)
+.telemetria/
+
+# Notas de sessão do vault: cada pessoa gera as suas
+vault_exemplo/sessoes/*
+!vault_exemplo/sessoes/.gitkeep
+vault_exemplo/.obsidian/
+
+# Sistema
+.DS_Store
+__pycache__/
