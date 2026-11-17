@@ -91,7 +91,7 @@ Um bom eval começa pequeno: cinco a dez casos reais, incluindo ao menos um caso
 | Time | Plugin instalado por marketplace, com skills, agentes e hooks |
 | Organização | Política gerenciada, que vence as configurações de baixo |
 
-O plugin deste repositório mostra o nível do time: veja [plugin/README.md](../plugin/README.md). Instalação: `/plugin marketplace add <dono>/engenharia-de-ia-na-pratica` e depois `/plugin install ia-na-pratica@engenharia-de-ia-na-pratica`. Para testar localmente, `claude --plugin-dir .`. Um projeto pode declarar `extraKnownMarketplaces` e `enabledPlugins` no settings.json.
+O plugin deste repositório mostra o nível do time: veja [plugin/README.md](../plugin/README.md). Instalação: `/plugin marketplace add Jpsoupa1/engenharia-de-ia-na-pratica` e depois `/plugin install ia-na-pratica@engenharia-de-ia-na-pratica`. Para testar localmente, `claude --plugin-dir .`. Um projeto pode declarar `extraKnownMarketplaces` e `enabledPlugins` no settings.json.
 
 Quando duas skills têm o mesmo nome, a da empresa vence a pessoal, e a pessoal vence a do projeto. Skills de plugin usam o prefixo `plugin:skill` e por isso não colidem com as suas.
 

@@ -28,24 +28,24 @@ Ele roda os comandos de **este** projeto de exemplo. No projeto de outra pessoa 
 Dentro do Claude Code, em um passo:
 
 ```
-/plugin install ia-na-pratica --marketplace <dono>/engenharia-de-ia-na-pratica
+/plugin install ia-na-pratica --marketplace Jpsoupa1/engenharia-de-ia-na-pratica
 ```
 
 Ou em dois passos (adiciona o marketplace e depois instala):
 
 ```
-/plugin marketplace add <dono>/engenharia-de-ia-na-pratica
+/plugin marketplace add Jpsoupa1/engenharia-de-ia-na-pratica
 /plugin install ia-na-pratica@engenharia-de-ia-na-pratica
 ```
 
 Ou pelo terminal:
 
 ```bash
-claude plugin marketplace add <dono>/engenharia-de-ia-na-pratica
+claude plugin marketplace add Jpsoupa1/engenharia-de-ia-na-pratica
 claude plugin install ia-na-pratica@engenharia-de-ia-na-pratica
 ```
 
-Troque `<dono>` pelo usuário ou organização do GitHub onde o repositório está.
+Se o seu time fizer um fork, troque `Jpsoupa1` pelo usuário ou organização do fork.
 
 As skills do plugin ganham o prefixo do plugin: `/ia-na-pratica:triagem`. Isso evita colisão com uma skill pessoal de mesmo nome.
 
@@ -55,7 +55,7 @@ Para o time inteiro receber a sugestão de instalar ao abrir um repositório, de
 {
   "extraKnownMarketplaces": {
     "engenharia-de-ia-na-pratica": {
-      "source": { "source": "github", "repo": "<dono>/engenharia-de-ia-na-pratica" }
+      "source": { "source": "github", "repo": "Jpsoupa1/engenharia-de-ia-na-pratica" }
     }
   },
   "enabledPlugins": { "ia-na-pratica@engenharia-de-ia-na-pratica": true }

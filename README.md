@@ -41,7 +41,7 @@ flowchart BT
 Pré-requisitos: [Claude Code](https://code.claude.com/docs), git, Node 22+ e Python 3.
 
 ```bash
-git clone https://github.com/<dono>/engenharia-de-ia-na-pratica.git
+git clone https://github.com/Jpsoupa1/engenharia-de-ia-na-pratica.git
 cd engenharia-de-ia-na-pratica
 (cd exemplo && npm install && npm test)      # os testes passam
 python3 .claude/hooks/test_hooks.py           # os hooks se comportam
@@ -56,7 +56,7 @@ Depois peça, por exemplo: *"implemente o filtro por data do exemplo"*. O agente
 Só quer as skills e os hooks no seu projeto? Instale o plugin, dentro do Claude Code:
 
 ```
-/plugin install ia-na-pratica --marketplace <dono>/engenharia-de-ia-na-pratica
+/plugin install ia-na-pratica --marketplace Jpsoupa1/engenharia-de-ia-na-pratica
 ```
 
 Detalhes em [plugin/](plugin/README.md).
