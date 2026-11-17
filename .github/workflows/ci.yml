@@ -38,7 +38,6 @@ jobs:
       - name: Relatório de telemetria com o JSONL de exemplo
         run: python3 observabilidade/relatorio.py observabilidade/exemplo.jsonl
 
+      # Varre o histórico inteiro com o binário oficial (funciona no primeiro push e em forks de organização).
       - name: Varredura de segredos
-        uses: gitleaks/gitleaks-action@v3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: docker run --rm -v "$PWD:/repo" ghcr.io/gitleaks/gitleaks:v8.24.3 git --redact -v /repo
